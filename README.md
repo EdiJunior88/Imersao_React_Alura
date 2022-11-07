@@ -9,7 +9,9 @@
 
 <h4>Como funciona a Imersão React da Alura?</h4>
 
-<p>Serão 5 dias imersos para você desenvolver seu primeiro projeto em React, adicionar ao seu portfólio e dar um upgrade na sua carreira.</p>
+<p>Em cada aula trazemos novos desafios para te ajudar a explorar as possibilidades do React e mergulhar mais fundo na linguagem.</p>
+
+<p>Você construirá um projeto incrível e completo para adicionar em seu portfólio!</p>
 
 <hr>
 
