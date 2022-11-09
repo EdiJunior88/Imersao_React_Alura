@@ -30,4 +30,14 @@
 
 <hr>
 
+<h3>Tempo Estudando o Projeto</h3>
+
+<p>
+  <a href="https://wakatime.com/badge/github/EdiJunior88/Imersao_React_Alura">
+    <img src="https://wakatime.com/badge/github/EdiJunior88/Imersao_React_Alura.svg" alt="wakatime">
+  </a>
+</p>
+
+<hr>
+
 <h4><b>Status do Projeto:</b> ⏳ Em andamento</h4>
