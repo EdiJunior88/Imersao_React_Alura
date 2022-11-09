@@ -1,3 +1,4 @@
+import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
 import { CSSReset } from "../src/components/CSSReset";
@@ -5,6 +6,8 @@ import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 
 function HomePage() {
+  const [valorDoFiltro, setValorDoFiltro] = React.useState("");
+
   return (
     <>
       <CSSReset />
@@ -14,22 +17,20 @@ function HomePage() {
           flexDirection: "column",
           flex: 1,
         }}>
-        <Menu />
+        <Menu
+          valorDoFiltro={valorDoFiltro}
+          setValorDoFiltro={setValorDoFiltro}
+        />
         <Header />
-        <Timeline playlists={config.playlists}>Conteúdo</Timeline>
+        <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
+          Conteúdo
+        </Timeline>
       </div>
     </>
   );
 }
 
 export default HomePage;
-
-const StyledBanner = styled.div`
-  background: url(${config.banner}) center;
-  background-size: cover;
-  min-height: 230px;
-  width: 100vw;
-`;
 
 const StyledHeader = styled.div`
   img {
@@ -39,7 +40,6 @@ const StyledHeader = styled.div`
   }
 
   .user-info {
-    margin-top: 10px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -48,13 +48,21 @@ const StyledHeader = styled.div`
   }
 `;
 
+const StyledBanner = styled.div`
+  background-image: url(${({ bg }) => bg});
+  background-size: cover;
+  background-position: center center;
+  min-height: 230px;
+  width: 100vw;
+  max-width: 100%;
+`;
+
 function Header() {
   return (
     <StyledHeader>
-      <StyledBanner />
+      <StyledBanner bg={config.bg} />
       <section className='user-info'>
         <img src={`https://github.com/${config.github}.png`} />
-
         <div>
           <h2>{config.name}</h2>
           <p>{config.job}</p>
@@ -64,27 +72,30 @@ function Header() {
   );
 }
 
-function Timeline(propriedades) {
-  const playlistsNames = Object.keys(propriedades.playlists);
-
+function Timeline({ searchValue, ...propriedades }) {
+  const playlistNames = Object.keys(propriedades.playlists);
   return (
     <StyledTimeline>
-      {playlistsNames.map((playlistsNames, id) => {
-        const videos = propriedades.playlists[playlistsNames];
-
+      {playlistNames.map((playlistName) => {
+        const videos = propriedades.playlists[playlistName];
         return (
-          <section key={id}>
-            <h2>{playlistsNames}</h2>
-
+          <section key={playlistName}>
+            <h2>{playlistName}</h2>
             <div>
-              {videos.map((video, id2) => {
-                return (
-                  <a href={video.url} key={id2}>
-                    <img src={video.thumb} />
-                    <span>{video.title}</span>
-                  </a>
-                );
-              })}
+              {videos
+                .filter((video) => {
+                  const titleNormalized = video.title.toLowerCase();
+                  const searchValueNormalized = searchValue.toLowerCase();
+                  return titleNormalized.includes(searchValueNormalized);
+                })
+                .map((video) => {
+                  return (
+                    <a key={video.url} href={video.url}>
+                      <img src={video.thumb} />
+                      <span>{video.title}</span>
+                    </a>
+                  );
+                })}
             </div>
           </section>
         );
