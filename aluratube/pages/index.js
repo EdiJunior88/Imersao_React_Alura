@@ -8,7 +8,6 @@ function HomePage() {
   return (
     <>
       <CSSReset />
-
       <div
         style={{
           display: "flex",
