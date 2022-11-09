@@ -40,6 +40,4 @@
 
 <hr>
 
-<hr>
-
 <h4><b>Status do Projeto:</b> ⏳ Em andamento</h4>
