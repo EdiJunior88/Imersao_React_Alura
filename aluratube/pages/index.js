@@ -25,6 +25,13 @@ function HomePage() {
 
 export default HomePage;
 
+const StyledBanner = styled.div`
+  background: url(${config.banner}) center;
+  background-size: cover;
+  min-height: 230px;
+  width: 100vw;
+`;
+
 const StyledHeader = styled.div`
   img {
     width: 80px;
@@ -33,7 +40,7 @@ const StyledHeader = styled.div`
   }
 
   .user-info {
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -45,6 +52,7 @@ const StyledHeader = styled.div`
 function Header() {
   return (
     <StyledHeader>
+      <StyledBanner />
       <section className='user-info'>
         <img src={`https://github.com/${config.github}.png`} />
 
