@@ -3,36 +3,15 @@ import { createGlobalStyle } from "styled-components";
 export const CSSReset = createGlobalStyle`
   /* Reset */
   * {
-    width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-
-  /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #b3b2b3 #ffffff;
-  }
-
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 16px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #b3b2b3;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
-  }
-
+  
   body {
     font-family: sans-serif;
+    background-color: ${({ theme }) => theme.backgroundBase};
+    color: ${({ theme }) => theme.textColorBase};
   }
 
   /* NextJS */

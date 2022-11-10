@@ -10,22 +10,22 @@ export const StyledTimeline = styled.div`
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 16px;
+    width: 1em;
   }
 
   *::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: #fff0;
   }
 
   *::-webkit-scrollbar-thumb {
     background-color: #b3b2b3;
     border-radius: 10px;
-    border: 3px solid #ffffff;
+    border: none;
   }
 
   flex: 1;
   width: 100%;
-  padding: 16px;
+  padding-left: 15px;
   overflow: hidden;
 
   h2 {

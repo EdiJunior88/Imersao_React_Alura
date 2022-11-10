@@ -1,7 +1,6 @@
 import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
-import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 
@@ -10,7 +9,6 @@ function HomePage() {
 
   return (
     <>
-      <CSSReset />
       <div
         style={{
           display: "flex",
@@ -33,12 +31,12 @@ function HomePage() {
 export default HomePage;
 
 const StyledHeader = styled.div`
+  background-color: ${({ theme }) => theme.backgroundLevel1};
   img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
   }
-
   .user-info {
     display: flex;
     align-items: center;
@@ -49,12 +47,10 @@ const StyledHeader = styled.div`
 `;
 
 const StyledBanner = styled.div`
+  background-color: blue;
   background-image: url(${({ bg }) => bg});
-  background-size: cover;
   background-position: center center;
-  min-height: 230px;
-  width: 100vw;
-  max-width: 100%;
+  height: 230px;
 `;
 
 function Header() {
@@ -74,10 +70,12 @@ function Header() {
 
 function Timeline({ searchValue, ...propriedades }) {
   const playlistNames = Object.keys(propriedades.playlists);
+
   return (
     <StyledTimeline>
       {playlistNames.map((playlistName) => {
         const videos = propriedades.playlists[playlistName];
+
         return (
           <section key={playlistName}>
             <h2>{playlistName}</h2>
