@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 import { videoService } from "../src/services/videoService";
-import { Analytics } from '@vercel/analytics/react';
 
 function HomePage() {
   const service = videoService();
@@ -46,7 +45,6 @@ function HomePage() {
         <Timeline searchValue={valorDoFiltro} playlists={playlists}>
           Conteúdo
         </Timeline>
-        <Analytics />
       </div>
     </>
   );
