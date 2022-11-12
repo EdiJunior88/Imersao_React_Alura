@@ -15,7 +15,7 @@
 
 <hr>
 
-<strong>Link da Página do Projeto</strong>: <a href="https://aluratube-imersao-dev.vercel.app/" target="_blank">https://aluratube-imersao-dev.vercel.app/</a>
+<strong>Link da Página do Projeto</strong>: <a href="https://aluratube-imersao-dev.vercel.app/">https://aluratube-imersao-dev.vercel.app/</a>
 
 <hr>
 
