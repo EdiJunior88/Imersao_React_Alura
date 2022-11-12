@@ -15,6 +15,10 @@
 
 <hr>
 
+<strong>Link da Página do Projeto</strong>: <a href="https://aluratube-imersao-dev.vercel.app/" target="_blank">https://aluratube-imersao-dev.vercel.app/</a>
+
+<hr>
+
 <h4>O que você vai aprender?</h4>
 
 <p>Esta imersão foi feita para quem tem conhecimento em lógica de programação, além de possuir nível básico em JavaScript, HTML e CSS e deseja criar um projeto completo em React.js.</p>
