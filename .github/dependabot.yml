@@ -9,3 +9,5 @@ updates:
     directory: "./aluratube" #Caminho para o diretório onde está o arquivo do gerenciador de pacotes (package.json, composer.json, etc.)
     schedule:
       interval: "daily" #Intervalo de verificação das atualizações (diário, semanal, mensal)
+
+#test
