@@ -13,7 +13,7 @@
     "@vercel/analytics": "^1.0.1",
     "next": "^13.4.4",
     "react": "^18.2.0",
-    "styled-components": "^5.3.10",
+    "styled-components": "^5.3.11",
     "vercel": "^29.3.6"
   },
   "devDependencies": {
