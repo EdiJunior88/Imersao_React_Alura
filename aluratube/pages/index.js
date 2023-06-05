@@ -8,8 +8,8 @@ import { videoService } from "../src/services/videoService";
 function HomePage() {
   const service = videoService();
   const [valorDoFiltro, setValorDoFiltro] = React.useState("");
-  const [playlists, setPlaylists] = React.useState({}); // config.playlists
-
+  const [playlists, setPlaylists] = React.useState({});
+  
   React.useEffect(() => {
     service.getAllVideos().then((dados) => {
       console.log("Dados", dados.data);
