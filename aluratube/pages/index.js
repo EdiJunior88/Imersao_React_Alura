@@ -42,7 +42,9 @@ function HomePage() {
           setValorDoFiltro={setValorDoFiltro}
         />
         <Header />
-        <Timeline searchValue={valorDoFiltro} playlists={playlists}>
+        <Timeline
+          searchValue={valorDoFiltro}
+          playlists={playlists}>
           Conteúdo
         </Timeline>
       </div>
@@ -80,7 +82,7 @@ function Header() {
   return (
     <StyledHeader>
       <StyledBanner bg={config.bg} />
-      <section className='user-info'>
+      <section className="user-info">
         <img src={`https://github.com/${config.github}.png`} />
         <div>
           <h2>{config.name}</h2>
@@ -111,7 +113,9 @@ function Timeline({ searchValue, ...propriedades }) {
                 })
                 .map((video) => {
                   return (
-                    <a key={video.url} href={video.url}>
+                    <a
+                      key={video.url}
+                      href={video.url}>
                       <img src={video.thumb} />
                       <span>{video.title}</span>
                     </a>
