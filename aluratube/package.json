@@ -19,6 +19,6 @@
   "devDependencies": {
     "babel-plugin-styled-components": "^2.1.4",
     "eslint": "8.44.0",
-    "eslint-config-next": "13.4.9"
+    "eslint-config-next": "13.4.10"
   }
 }
