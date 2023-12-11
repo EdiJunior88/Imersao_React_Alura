@@ -1,0 +1,21 @@
+name: Keep Supabase Active
+
+on:
+  schedule:
+    - cron: '0 */10 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install Axios
+        run: npm install axios
+
+      - name: Make API call to Supabase
+        run: node -e "require('axios').get('https://kbepchfnyekginxgukoi.supabase.co')"
