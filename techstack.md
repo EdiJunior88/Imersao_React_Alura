@@ -38,7 +38,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [EdiJunior88/Imersao_React_Alura](https://github.com/EdiJunior88/Imersao_React_Alura)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|13<br/>Tools used|02/02/24 <br/>Report generated|
+|13<br/>Tools used|02/04/24 <br/>Report generated|
 |------|------|
 </div>
 
