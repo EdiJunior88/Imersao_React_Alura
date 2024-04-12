@@ -9,16 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.42.0",
+    "@supabase/supabase-js": "^2.42.3",
     "@vercel/analytics": "^1.2.2",
-    "next": "14.1.4",
+    "next": "^14.2.0",
+    "npm-upgrade": "^3.1.0",
     "react": "^18.2.0",
     "styled-components": "^6.1.8",
-    "vercel": "^33.7.0"
+    "vercel": "^34.0.0"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^2.1.4",
     "eslint": "9.0.0",
-    "eslint-config-next": "14.1.4"
+    "eslint-config-next": "^14.2.0"
   }
 }
