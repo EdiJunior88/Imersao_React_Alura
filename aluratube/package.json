@@ -20,6 +20,6 @@
   "devDependencies": {
     "babel-plugin-styled-components": "^2.1.4",
     "eslint": "^9",
-    "eslint-config-next": "14.2.1"
+    "eslint-config-next": "14.2.2"
   }
 }
